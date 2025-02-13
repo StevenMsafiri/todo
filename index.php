@@ -89,10 +89,10 @@ require 'db_conn.php';
                 );
         });
 
-        $(".check-box").click(function(){
+        $(".check-box").click(function(e){
             const id = $(this).attr('data-todo-id');
             
-            $.post('app/checked.php'),
+            $.post('app/checked.php',
             {
                 id: id
             },
@@ -105,7 +105,7 @@ require 'db_conn.php';
                         h2.addClass('checked');
                     }
                 }
-            }
+            })
         });
     });
 
