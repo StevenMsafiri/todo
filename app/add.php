@@ -20,6 +20,8 @@
       exit();
    }
 
+  }else{
+   header("Location: ../index.php?mess=error");
   }
 
 ?>
